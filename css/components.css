@@ -1,0 +1,215 @@
+/* ==================== BUTTONS ==================== */
+
+/* Connect Wallet Button (Header) */
+.connect-wallet-btn {
+  background: var(--gradient-primary);
+  color: var(--text-primary);
+  padding: 0.6rem 1.5rem;
+  border-radius: var(--radius-xl);
+  font-weight: var(--font-semibold);
+  font-size: var(--text-sm);
+  transition: all var(--transition-base);
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.connect-wallet-btn:hover {
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-1px);
+}
+
+.connect-wallet-btn.connected {
+  background: rgba(0, 217, 255, 0.15);
+  border: 1px solid var(--border-glow);
+}
+
+/* CTA Button (Hero) */
+.cta-button {
+  padding: 1.2rem 3rem;
+  font-size: 1.2rem;
+  border-radius: var(--radius-xl);
+  font-weight: var(--font-bold);
+}
+
+.cta-button:hover {
+  box-shadow: 0 0 30px rgba(0, 217, 255, 0.4);
+}
+
+/* ==================== PRICE BADGE ==================== */
+.price-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  border-radius: var(--radius-xl);
+  background: rgba(139, 92, 246, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  margin-top: var(--spacing-lg);
+  animation: glow 3s ease-in-out infinite;
+}
+
+.price-value {
+  font-size: 1.3rem;
+  font-weight: var(--font-bold);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ==================== FEATURE CARDS ==================== */
+.feature-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  transition: all var(--transition-base);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--border-glow);
+  box-shadow: var(--shadow-glow);
+}
+
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  color: var(--accent-primary);
+  filter: drop-shadow(0 0 10px var(--accent-primary));
+}
+
+.feature-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: var(--font-bold);
+  margin-top: var(--spacing-sm);
+}
+
+.feature-description {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-top: var(--spacing-xs);
+  line-height: 1.7;
+}
+
+/* ==================== REVIEW CARDS ==================== */
+.review-card {
+  flex-shrink: 0;
+  width: 350px;
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-right: 1.5rem;
+  transition: border-color var(--transition-base);
+}
+
+.review-card:hover {
+  border-color: var(--border-glow);
+}
+
+.review-stars {
+  color: #ffd700;
+  margin-bottom: var(--spacing-sm);
+  font-size: 1rem;
+}
+
+.review-text {
+  color: #e0e0e0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.review-author {
+  color: var(--accent-primary);
+  font-size: 0.9rem;
+  margin-top: var(--spacing-sm);
+  font-weight: var(--font-semibold);
+}
+
+/* ==================== FAQ ACCORDION ==================== */
+.faq-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color var(--transition-base);
+}
+
+.faq-item:hover {
+  border-color: var(--border-glow);
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: var(--font-semibold);
+  color: var(--text-primary);
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-align: left;
+}
+
+.faq-icon {
+  transition: transform var(--transition-base);
+  color: var(--text-tertiary);
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-slow);
+}
+
+.faq-answer p {
+  padding: 0 1.5rem 1.5rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 640px) {
+  .review-card {
+    width: 280px;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
+  }
+
+  .cta-button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+    padding: 1.2rem;
+  }
+
+  .faq-answer p {
+    padding: 0 1.2rem 1.2rem;
+    font-size: 0.95rem;
+  }
+}
